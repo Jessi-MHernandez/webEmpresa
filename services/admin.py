@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Service
 
 # Register your models here.
-#VAMOS A CREAR UNA CONFIGURACION BASICA PARA EL ADMINISTRADOR
+#VAMOS A CREAR UNA CONFIGURACION BASICA PARA EL ADMINISTRADOR 37
 class ServiceAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
 

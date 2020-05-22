@@ -1,11 +1,11 @@
 from django.db import models
 
-# Create your models here.
+# Create your models here. 37
 class Service(models.Model):
     title = models.CharField(max_length=200, verbose_name="Titulo")
     subtitle = models.CharField(max_length=200, verbose_name="Subtítulo")
     content = models.TextField(verbose_name="Contenido")
-    image = models.ImageField(verbose_name="Imagen", upload_to="servicies")
+    image = models.ImageField(verbose_name="Imagen", upload_to="services")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
@@ -13,6 +13,6 @@ class Service(models.Model):
         verbose_name = "servicio"
         verbose_name_plural = "servicios"
         ordering = ['-created']
-#VAMOS A DEFINIR UN METODO STRING QUE DEVUELVA SOLO EL TITULO DEL SERVICIO
-    def _str_(self):
+#VAMOS A DEFINIR UN METODO STRING QUE DEVUELVA SOLO EL TITULO DEL SERVICIO 37
+    def __str__(self):
         return self.title

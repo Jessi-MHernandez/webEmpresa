@@ -20,6 +20,8 @@ from django.conf import settings
 urlpatterns = [
     #Rutas de core 31
      path('', include('core.urls')),
+     #Rutas de services 39
+     path('services/', include('services.urls')),
     #Rutas del admin
     path('admin/', admin.site.urls),
 
