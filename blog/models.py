@@ -23,8 +23,8 @@ class Post(models.Model):
     image = models.ImageField(verbose_name="Imagen", upload_to="blog", null=True, blank=True)
     #CASCADE borrara todas las entradas del autor eliminado
     author = models.ForeignKey(User, verbose_name="Autor",  on_delete=models.CASCADE)
-    #CREAMOS UN CAMPO MUCHOS A MUCHOS
-    categories = models.ManyToManyField(Category, verbose_name="Categorias")
+    #CREAMOS UN CAMPO MUCHOS A MUCHOS 43
+    categories = models.ManyToManyField(Category, verbose_name="Categorias", related_name="get_posts")
     created = models.DateTimeField(auto_now_add=True, verbose_name="Fecha de creación")
     updated = models.DateTimeField(auto_now=True, verbose_name="Fecha de edición")
 
