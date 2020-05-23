@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-# Create your views here. 31-34
+# Create your views here. 31-34-46
 #Vamos a iniciar a crear las vistas
 
 def home(request):
@@ -15,5 +15,3 @@ def store(request):
 def contact(request):
     return render(request, "core/contact.html")
 
-def sample(request):
-    return render(request, "core/sample.html")
