@@ -19,9 +19,9 @@ from django.conf import settings
 
 urlpatterns = [
     #Rutas de core 31
-     path('', include('core.urls')),
+    path('', include('core.urls')),
      #Rutas de services 39
-     path('services/', include('services.urls')),
+    path('services/', include('services.urls')),
     #Rutas de blog 42
     path('blog/', include('blog.urls')),
     #Rutas de pages 46

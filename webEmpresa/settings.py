@@ -37,8 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'core',
     'blog',
+    'ckeditor',
+    'core',    
     'pages.apps.PagesConfig',
     'services.apps.ServicesConfig',
     'social.apps.SocialConfig',
@@ -68,6 +69,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'social.procesos.ctx_dict'
+                
             ],
         },
     },
@@ -128,3 +130,10 @@ STATIC_URL = '/static/'
 #Configuracion de los ficheros media 37
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+#ckeditor 49
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': None,
+    }
+}

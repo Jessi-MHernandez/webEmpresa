@@ -5,5 +5,6 @@ from .models import Page
 #CREAR UN ADMIN DE PRUEBA 46
 class PageAdmin(admin.ModelAdmin):
     readonly_fields = ('created', 'updated')
+    list_display = ('title', 'order')
 
 admin.site.register(Page, PageAdmin)
