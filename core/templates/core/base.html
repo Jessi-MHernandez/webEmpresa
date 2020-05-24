@@ -8,7 +8,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>{% block title %}{% endblock %} | La Caffettiera</title>
+    <title>{% block title %}{% endblock %} | Jess - Solutions</title>
 
     {% load static %}
 
@@ -28,14 +28,14 @@
   <body>
 
     <h1 class="site-heading text-center text-white d-none d-lg-block">
-      <span class="site-heading-upper text-primary mb-3">L'autentico caffè d'italia</span>
-      <span class="site-heading-lower">La Caffettiera</span>
+      <span class="site-heading-upper text-primary mb-3">T E C N O L O G Y </span>
+      <span class="site-heading-lower">J E S S  -  S O L U T I O N S</span>
     </h1>
 
     <!-- Navegación -->
     <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
       <div class="container">
-        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}">La Caffettiera</a>
+        <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="{% url 'home' %}"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -97,6 +97,15 @@
 	          </span>
 	        </a>
           {% endif %}
+
+          {% if LINK_YOUTUBE %}
+	        <a href="{{LINK_YOUTUBE}}" class="link">
+	          <span class="fa-stack fa-lg">
+	            <i class="fa fa-circle fa-stack-2x"></i>
+	            <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
+	          </span>
+	        </a>
+          {% endif %}
 	    </p>
         <p class="m-0 mbt">
         <!--<a href="sample.html" class="link">Política de privacidad</a> ·
@@ -108,7 +117,7 @@
             <a href="{% url 'page' page.id page.title|slugify %}" class="link">{{page.title}}</a> {% if not forloop.last %}·{% endif %} 
           {% endfor %}
 		</p>
-        <p class="m-0 mbt1">&copy; La Caffettiera 2018</p>
+        <p class="m-0 mbt1">&copy; Jess Solutions - 2020</p>
       </div>
 	</footer>
 
